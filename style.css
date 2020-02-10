@@ -9,6 +9,12 @@ body {
     font-family: Arial;
     margin: 0;
     overflow-x: hidden;
+    background-color: whitesmoke;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -23,7 +29,7 @@ body {
     text-align: center;
     margin-block-start: .9em;
     margin-block-end: .9em;
-    padding-left: 10rem;
+    padding-left: 8rem;
 }
 
 
@@ -31,8 +37,8 @@ body {
 
 .header {
     position: relative;
-    padding: 60px;
-    height: 600px;
+    padding: 100px;
+    height: 700px;
     text-align: center;
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/slide1.jpg);
     color: white;
@@ -82,16 +88,16 @@ body {
 
 .flex-style-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-left: 8rem;
-    padding-right: 8rem;
+    padding-right: 6.5rem;
 }
 
 .brand {
     height: 125px;
     width: 60px;
     position: absolute;
-    left: 5.5rem;
+    left: 13rem;
 }
 
 .brand img {
@@ -104,13 +110,13 @@ body {
 .navbar {
     background-color: whitesmoke;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-left: 8.8rem;
 }
 
 .navlink {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-block-start: 0;
     margin-block-end: 0;
 }
@@ -218,26 +224,6 @@ a:hover {
 }
 
 
-/* Column container */
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-/* Create two unequal columns that sits next to each other */
-
-
-/* Sidebar/left column */
-
-.side {
-    flex: 30%;
-    background-color: #f1f1f1;
-    padding: 20px;
-}
-
-
 /*Flex positionnement*/
 
 .flex-center {
@@ -245,7 +231,7 @@ a:hover {
     width: 75%;
     align-items: center;
     flex-direction: column;
-    margin-left: 13%;
+    margin-left: 1%;
     background-color: white;
 }
 
@@ -253,7 +239,34 @@ a:hover {
 /* Main column */
 
 .main {
-    padding: 20px;
+    width: 99%;
+    background-color: whitesmoke;
+}
+
+.main-text--centered {
+    border: none;
+    border: .5px solid black;
+    background: transparent;
+    text-align: center;
+    outline: none;
+    width: max-content;
+    height: max-content;
+    text-transform: capitalize !important;
+    padding: 8px 1px 8px 12px;
+    margin: 10px 10px 30px 10px;
+}
+
+.main-text--centered a {
+    text-decoration: none;
+    color: black;
+    outline: none;
+    margin: 0;
+}
+
+.main-text--centered a:hover {
+    background-color: transparent;
+    cursor: pointer;
+    color: #1a1a1a;
 }
 
 
@@ -261,47 +274,181 @@ a:hover {
 
 .gallery {
     padding-bottom: 30px;
+    width: 75%;
 }
 
 .gallery__item {
-    flex: 50%;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    background-color: white;
 }
 
 .gallery__img {
     background-color: white;
     text-align: center;
+    height: 250px;
+    padding-top: 25%;
+    width: 100%;
+    margin: 0;
 }
 
-.gallery__img--left {
-    float: left;
-    width: 50%;
-}
-
+.gallery__img--left,
 .gallery__img--right {
-    float: right;
-    width: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    height: 250px;
+    width: 100%;
 }
 
 .gallery__left {
-    float: left;
-    width: 50%;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
 .gallery__right {
-    float: right;
-    width: 50%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row: 1 /span 2;
+    grid-column: 1 /span 2;
+}
+
+.img-bg {
+    height: 500px;
+    width: 500px;
 }
 
 
 /* Footer */
 
 .footer {
-    padding: 20px;
     text-align: center;
-    background: #ddd;
+    width: 100vw;
+    position: absolute;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    background: #dcdcdc;
+    width: 100%;
+    height: 150px;
+    justify-content: center;
+}
+
+.row img {
+    width: 100px;
+    height: 100px;
+    margin: 30px;
+}
+
+.fas.fa-times {
+    top: 50px;
+}
+
+.fas.fa-times::before {
+    margin: 50px;
+    height: 50px;
+    top: -80px;
+    position: relative;
+    font-size: 20px;
+    font-weight: lighter;
+    transform: translateY(-90px);
+}
+
+.up {
+    width: 0;
+    height: 0;
+    border: 30px solid transparent;
+    border-bottom-color: rgb(255, 102, 0);
+    position: absolute;
+    left: 49%;
+    top: 90px;
+}
+
+.up::after {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 30px;
+    width: 0;
+    height: 0;
+    border: 30px solid transparent;
+    border-top-color: rgb(255, 102, 0);
+}
+
+.fas.fa-chevron-up {
+    color: white;
+    margin-left: -40px;
+}
+
+.fas.fa-chevron-up::before {
+    margin: 50px;
+    height: 50px;
+    top: 10px;
+    left: -17px;
+    position: relative;
+    font-size: 20px;
+    font-weight: lighter;
+    transform: translateY(-90px);
+}
+
+.foot-end {
+    background: rgb(37, 37, 37);
+    width: 100%;
+}
+
+.foot {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background: rgb(37, 37, 37);
+    height: 430px;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+
+.foot img {
+    width: 100px;
+    height: 100px;
+    filter: invert(0%);
+    -webkit-filter: invert(0%);
+    background-color: transparent;
+    margin-left: 10px;
+}
+
+.navfoot {
+    background-color: transparent;
+    margin-top: 30px;
+}
+
+.navfoot a {
+    color: #d5d5d5;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+}
+
+.social-medias {
+    background: rgb(37, 37, 37);
+    z-index: 1;
+}
+
+.fab::before {
+    margin: 30px;
+    height: 50px;
+    top: -80px;
+    position: relative;
+    font-size: 40px;
+    font-weight: lighter;
+    transform: translateY(-90px);
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+hr {
+    top: -50px;
+    position: relative;
 }
 
 
