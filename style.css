@@ -8,42 +8,213 @@
 body {
     font-family: Arial;
     margin: 0;
+    overflow-x: hidden;
+}
+
+
+/*top header*/
+
+.top-header {
+    background-color: black;
+    color: white;
+}
+
+.text-top-header {
+    text-align: center;
+    margin-block-start: .9em;
+    margin-block-end: .9em;
+    padding-left: 10rem;
 }
 
 
 /* Header/logo Title */
 
 .header {
+    position: relative;
     padding: 60px;
+    height: 600px;
     text-align: center;
-    background: #1abc9c;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/slide1.jpg);
     color: white;
+}
+
+.header img {
+    width: 60px;
+    height: 60px;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    border-bottom: 1px solid rgb(0, 153, 255);
+}
+
+.header-text,
+.main-text {
+    text-transform: capitalize !important;
+}
+
+.header-text--centered {
+    position: absolute;
+    top: 80%;
+    left: 53%;
+    transform: translate(-80%, -53%);
+    border: none;
+    border: .5px solid white;
+    background: transparent;
+    text-align: center;
+    outline: none;
+    width: max-content;
+    height: max-content;
+    text-transform: capitalize !important;
+    padding: 8px 1px 8px 12px;
+}
+
+.header-text--centered a {
+    text-decoration: none;
+    color: white;
+    outline: none;
+    margin: 0;
+}
+
+.header-text--centered a:hover {
+    background-color: transparent;
+    cursor: pointer;
+    color: #d5d5d5;
+}
+
+.flex-style-header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+.brand {
+    height: 125px;
+    width: 60px;
+    position: absolute;
+    left: 5.5rem;
+}
+
+.brand img {
+    height: 100%;
 }
 
 
 /* Style the top navigation bar */
 
 .navbar {
+    background-color: whitesmoke;
     display: flex;
-    background-color: #333;
+    justify-content: space-between;
+    padding-left: 8.8rem;
+}
+
+.navlink {
+    display: flex;
+    justify-content: space-between;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 
 /* Style the navigation bar links */
 
-.navbar a {
-    color: white;
-    padding: 14px 20px;
+a {
+    padding: 10px 16px 10px 16px;
     text-decoration: none;
     text-align: center;
+}
+
+.navbar a {
+    color: black;
+    border-left: .5px solid #aaa;
+    border-right: .5px solid #aaa;
+    font-size: 20px;
+    line-height: 3;
+}
+
+.navlink a {
+    color: whitesmoke;
+    font-size: 12px;
+    margin-right: .5em;
+    line-height: 1.5;
+}
+
+#lblCartCount {
+    font-size: 12px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    border-radius: 50%;
+    vertical-align: top;
 }
 
 
 /* Change color on hover */
 
-.navbar a:hover {
+a:hover {
     background-color: #ddd;
     color: black;
+}
+
+
+/*Dropdown menu*/
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 10px 14px 10px 14px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*image show*/
+
+.image-show {
+    display: flex;
+    justify-content: center;
+    transform: scale(0.8, 1.2);
+    border: none;
+    height: max-content;
+    margin-bottom: 30px;
+}
+
+.image-show img {
+    height: 270px;
+    width: 90%;
 }
 
 
@@ -67,21 +238,61 @@ body {
 }
 
 
+/*Flex positionnement*/
+
+.flex-center {
+    display: flex;
+    width: 75%;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 13%;
+    background-color: white;
+}
+
+
 /* Main column */
 
 .main {
-    flex: 70%;
-    background-color: white;
     padding: 20px;
 }
 
 
 /* Fake image, just for this example */
 
-.fakeimg {
-    background-color: #aaa;
+.gallery {
+    padding-bottom: 30px;
+}
+
+.gallery__item {
+    flex: 50%;
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    padding: 20px;
+}
+
+.gallery__img {
+    background-color: white;
+    text-align: center;
+}
+
+.gallery__img--left {
+    float: left;
+    width: 50%;
+}
+
+.gallery__img--right {
+    float: right;
+    width: 50%;
+}
+
+.gallery__left {
+    float: left;
+    width: 50%;
+}
+
+.gallery__right {
+    float: right;
+    width: 50%;
 }
 
 

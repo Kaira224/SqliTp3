@@ -2,60 +2,136 @@
 <html>
 
 <head>
-    <title>Page Title</title>
+    <title>SQLI</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Note -->
-    <div style="background:yellow;padding:5px">
-        <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
+    <!--Navigation part-->
+    <div class="container">
+
+        <div class="brand">
+            <img src="brand.png" alt="" class="">
+        </div>
+        <!-- top navigation bar -->
+        <div class="flex-style-header top-header">
+            <h5 class="text-top-header">Resize the browser window to see the responsive effect.</h5>
+            <div class="navlink">
+                <a href="#">New</a>
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Dropdown 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="flex-style-header navbar">
+            <div class="navbar navbar--link">
+                <a href="#">New</a>
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Sales</a>
+                <a href="#">Sales</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="navbar navbar--nav">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i><label id="lblCartCount">9</label></a>
+            </div>
+
+        </div>
     </div>
 
     <!-- Header -->
-    <div class="header">
-        <h1>My Website</h1>
+    <section class="header">
+        <img src="images/logo.png" alt="puma">
+        <h1 class="header-text">puma triple black back</h1>
         <p>With a <b>flexible</b> layout.</p>
-    </div>
-
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-    </div>
-
+        <div class="header-text--centered">find out more <a href="#">></a></div>
+    </section>
+    <!-- Image show after slideshow -->
+    <section class="image-show">
+        <img src="images/image.jpg" alt="puma">
+    </section>
     <!-- The flexible grid (content) -->
+
+    <div class="flex-center main">
+        <h2 class="main-text">from the blog</h2>
+        <p>Title description, Dec 7, 2017</p>
+        <div class=".flex-center gallery">
+            <div class="gallery__item">
+                <aside class="gallery__right">
+                    <figure>
+                        <img src="images/image.jpg" alt="puma">
+                    </figure>
+                </aside>
+                <aside class="gallery__left">
+                    <figure><img src="images/image.jpg" alt="puma"></figure>
+                    <figure class="gallery__left gallery__img">Image</figure>
+                    <figure><img src="images/image.jpg" alt="puma"></figure>
+                    <figure class="gallery__left gallery__img">Image</figure>
+                </aside>
+            </div>
+            <div class="gallery__item">
+                <aside class="gallery__left">
+                    <figure><img src="images/image.jpg" alt="puma"></figure>
+                    <figure class="gallery__left gallery__img">Image</figure>
+                    <figure><img src="images/image.jpg" alt="puma"></figure>
+                    <figure class="gallery__left gallery__img">Image</figure>
+                </aside>
+                <aside class="gallery__right">
+                    <figure>
+                        <img src="images/image.jpg" alt="puma">
+                    </figure>
+                </aside>
+            </div>
+            <div class="gallery__item">
+                <aside class="gallery__right">
+                    <figure>
+                        <img src="images/image.jpg" alt="puma">
+                    </figure>
+                </aside>
+                <aside class="gallery__left">
+                    <figure><img src="images/image.jpg" alt="puma"></figure>
+                    <figure class="gallery__left gallery__img">Image</figure>
+                    <figure><img src="images/image.jpg" alt="puma"></figure>
+                    <figure class="gallery__left gallery__img">Image</figure>
+                </aside>
+            </div>
+        </div>
+        <h2>TITLE HEADING</h2>
+        <h5>Title description, Sep 2, 2017</h5>
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+
+    {#
     <div class="row">
         <div class="side">
             <h2>About Me</h2>
             <h5>Photo of me:</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
+            <div class="fakeimg fakeimg--120">Image</div>
             <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
             <h3>More Text</h3>
             <p>Lorem ipsum dolor sit ame.</p>
-            <div class="fakeimg" style="height:60px;">Image</div><br>
-            <div class="fakeimg" style="height:60px;">Image</div><br>
-            <div class="fakeimg" style="height:60px;">Image</div>
+            <div class="fakeimg fakeimg--60">Image</div><br>
+            <div class="fakeimg fakeimg--60">Image</div><br>
+            <div class="fakeimg fakeimg--60">Image</div>
         </div>
-        <div class="main">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Dec 7, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-            <br>
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-    </div>
+
+    </div> #}
 
     <!-- Footer -->
     <div class="footer">
